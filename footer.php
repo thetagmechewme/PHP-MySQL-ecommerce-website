@@ -140,14 +140,11 @@ $statement = $pdo->prepare("SELECT * FROM tbl_settings WHERE id=1");
 $statement->execute();
 $result = $statement->fetchAll(PDO::FETCH_ASSOC);                            
 foreach ($result as $row) {
-    $stripe_public_key = $row['stripe_public_key'];
-    $stripe_secret_key = $row['stripe_secret_key'];
 }
 ?>
 
 <script src="assets/js/jquery-2.2.4.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
-<script src="https://js.stripe.com/v2/"></script>
 <script src="assets/js/megamenu.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/owl.animate.js"></script>
@@ -177,12 +174,12 @@ foreach ($result as $row) {
 				$('#stripe_form').hide();
 				$('#bank_form').hide();
             } else if ( advFieldsStatus == 'PayPal' ) {
-               	$('#paypal_form').show();
+               	$('#bank_form').show();
 				$('#stripe_form').hide();
 				$('#bank_form').hide();
             } else if ( advFieldsStatus == 'Stripe' ) {
                	$('#paypal_form').hide();
-				$('#stripe_form').show();
+				$('#bank_form').show();
 				$('#bank_form').hide();
             } else if ( advFieldsStatus == 'Bank Deposit' ) {
             	$('#paypal_form').hide();
@@ -193,7 +190,7 @@ foreach ($result as $row) {
 	});
 
 
-	$(document).on('submit', '#stripe_form', function () {
+	/*$(document).on('submit', '#stripe_form', function () {
         // createToken returns immediately - the supplied callback submits the form if there are no errors
         $('#submit-button').prop("disabled", true);
         $("#msg-container").hide();
@@ -217,7 +214,7 @@ foreach ($result as $row) {
             var token = response['id'];
             form$.append("<input type='hidden' name='stripeToken' value='" + token + "' />");
             form$.get(0).submit();
-        }
+        }*/
     }
 </script>
 <?php echo $before_body; ?>
