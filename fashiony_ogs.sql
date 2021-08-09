@@ -117,7 +117,7 @@ CREATE TABLE `tbl_customer` (
 --
 
 INSERT INTO `tbl_customer` (`cust_id`, `cust_userame`, `cust_firstname`, `cust_lastname`, `cust_email`, `cust_phone`, `cust_address`, `cust_city`, `cust_state`, `cust_zip`,  `cust_country`, `cust_password`, `cust_token`, `cust_datetime`, `cust_timestamp`, `cust_status`) VALUES
-(1, 'Hammad', '', '', 'wonk.xags@gmail.com', '49857243857', 'address', 'dubai', 'dubai', '0000', '13', 'e10adc3949ba59abbe56e057f20f883e', '34d03a29d49aaba635ad6efee22c4d30', '2018-04-21 02:40:10', '1524264010', 1),
+(1, 'Matty73', 'Matt', 'McGehee', 'mmcgehee2010@gmail.com', '3144791311', '2674 glendrive Place', 'Maryland Heights', 'MO', '63043', '13', '81dc9bdb52d04dc20036dbd8313ed055', '34d03a29d49aaba635ad6efee22c4d30', '2018-04-21 02:40:10', '1524264010', 1),
 (2, 'Hammad Hassan', '',  '', 'mc170200216@vu.edu.pk', '49857243857', 'Dubai Investments Park 1', 'Dubai', 'Dubai', '75400', 1, '9794cb7c1989a7d0d36a62426cb170e4', '92dd269f6494db9e8e8ab28c528bbe80', '2018-04-23 10:06:51', '1524506811', 1);
 
 -- --------------------------------------------------------
@@ -153,65 +153,10 @@ CREATE TABLE `tbl_end_category` (
 --
 
 INSERT INTO `tbl_end_category` (`ecat_id`, `ecat_name`, `mcat_id`) VALUES
-(1, 'Headwear ', 1),
-(2, 'Sunglasses', 1),
+(1, 'Michael Jordan ', 2),
+(2, 'Jordan XIII', 9),
 (3, 'Watches', 1),
-(4, 'Sandals', 2),
-(5, 'Boots', 2),
-(6, 'Tops', 3),
-(7, 'T-Shirt', 3),
-(8, 'Watches', 4),
-(9, 'Sunglasses', 4),
-(11, 'Sports Shoes', 2),
-(12, 'Sandals', 6),
-(13, 'Flat Shoes', 6),
-(14, 'Hoodies', 7),
-(15, 'Coats & Jackets', 7),
-(16, 'Pants', 8),
-(17, 'Jeans', 8),
-(18, 'Joggers', 8),
-(19, 'Shorts', 8),
-(20, 'T-shirts', 9),
-(21, 'Casual Shirts', 9),
-(22, 'Formal Shirts', 9),
-(23, 'Polo Shirts', 9),
-(24, 'Vests', 9),
-(25, 'Casual Shoes', 2),
-(26, 'Boys', 10),
-(27, 'Girls', 10),
-(28, 'Boys', 11),
-(29, 'Girls', 11),
-(30, 'Boys', 12),
-(31, 'Girls', 12),
-(32, 'Dresses', 7),
-(33, 'Tops', 7),
-(34, 'T-Shirts & Vests', 7),
-(35, 'Pants & Leggings', 7),
-(36, 'Sportswear', 7),
-(37, 'Plus Size Clothing', 7),
-(38, 'Socks & Hosiery', 7),
-(39, 'Fragrance', 3),
-(40, 'Skincare', 3),
-(41, 'Hair Care', 3),
-(42, 'Jewellery', 4),
-(43, 'Eyes Care', 3),
-(44, 'Lips', 3),
-(45, 'Face Care', 3),
-(46, 'Gift Sets', 3),
-(47, 'Scarves & Headwear', 4),
-(48, 'Multipacks', 4),
-(49, 'Other Accessories', 4),
-(50, 'Pumps', 6),
-(51, 'Sneakers', 6),
-(52, 'Sports Shoes', 6),
-(53, 'Boots', 6),
-(54, 'Comfort Shoes', 6),
-(55, 'Slippers & Casual Shoes', 6),
-(56, 'Formal Shoes', 2),
-(57, 'Belts', 1),
-(58, 'Multipacks', 1),
-(59, 'Other Accessories', 1),
-(60, 'Bags', 4);
+(4, 'Sandals', 2);
 
 -- --------------------------------------------------------
 
@@ -288,8 +233,6 @@ INSERT INTO `tbl_language` (`lang_id`, `lang_name`, `lang_value`) VALUES
 (33, 'Payment Section', 'Payment Section'),
 (34, 'Select Payment Method', 'Select Payment Method'),
 (35, 'Select a Method', 'Select a Method'),
-(36, 'PayPal', 'PayPal'),
-(37, 'Stripe', 'Stripe'),
 (38, 'Bank Deposit', 'Bank Deposit'),
 (39, 'Card Number', 'Card Number'),
 (40, 'CVV', 'CVV'),
@@ -434,17 +377,16 @@ CREATE TABLE `tbl_mid_category` (
 --
 
 INSERT INTO `tbl_mid_category` (`mcat_id`, `mcat_name`, `tcat_id`) VALUES
-(1, 'Men Accessories', 1),
-(2, 'Men\'s Shoes', 1),
-(3, 'Beauty Products', 2),
-(4, 'Accessories', 2),
-(6, 'Shoes', 2),
-(7, 'Clothing', 2),
-(8, 'Bottoms', 1),
-(9, 'T-shirts & Shirts', 1),
-(10, 'Clothing', 3),
-(11, 'Shoes', 3),
-(12, 'Accessories', 3);
+(1, 'Home', 1),
+(2, 'NBA', 2),
+(3, 'NFL', 2);
+(4, 'NHL & MLB', 2),
+(5, 'Other Sports', 2),
+(6, 'Memorabilia', 3);
+(7, 'Entertainment', 3),
+(8, 'Clothing', 4),
+(9, 'Currencies, Metals, Gems', 5);
+(10, 'Services', 6);
 
 -- --------------------------------------------------------
 
@@ -641,13 +583,7 @@ CREATE TABLE `tbl_product` (
 --
 
 INSERT INTO `tbl_product` (`p_id`, `p_name`, `p_old_price`, `p_current_price`, `p_qty`, `p_featured_photo`, `p_description`, `p_short_description`, `p_feature`, `p_condition`, `p_return_policy`, `p_total_view`, `p_is_featured`, `p_is_active`, `ecat_id`) VALUES
-(76, 'Gosh Donoderm Hand & Nail Cream', '', '30', 10, 'product-featured-76.jpg', '<ul class=\"generatedBullets\" style=\"box-sizing: inherit; line-height: 1.6; margin-right: 0px; margin-bottom: 1rem; margin-left: 1.25rem; padding: 0px; list-style-position: outside; color: rgb(10, 10, 10); font-family: opensans, &quot;Helvetica Neue&quot;, Helvetica, Helvetica, Arial, sans-serif;\"><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit;\">Category Type : Hands</li><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit;\">Suitable Skin Type : All Skin Type</li><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit;\">Texture : Cream</li><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit;\">Recommended Use : Wrinkles &amp; Anti Aging</li><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit;\">Size : 30 ml</li><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit;\">Type : Lotion</li><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit;\">Brand : GOSH</li></ul>', '<p>Gosh Donoderm Hand & Nail Cream - 30 ML<br></p>', '<ul class=\"generatedBullets\" style=\"box-sizing: inherit; line-height: 1.6; margin-right: 0px; margin-bottom: 0px; margin-left: 1.25rem; padding: 0px; list-style-position: inside; color: rgb(51, 51, 51); font-family: opensans, &quot;Helvetica Neue&quot;, Helvetica, Helvetica, Arial, sans-serif; font-size: 14px; text-transform: uppercase;\"><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit; text-transform: none; list-style: inherit !important;\">Category Type : Hands</li><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit; text-transform: none; list-style: inherit !important;\">Suitable Skin Type : All Skin Type</li><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit; text-transform: none; list-style: inherit !important;\">Texture : Cream</li><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit; text-transform: none; list-style: inherit !important;\">Recommended Use : Wrinkles &amp; Anti Aging</li><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit; text-transform: none; list-style: inherit !important;\">Size : 30 ml</li><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit; text-transform: none; list-style: inherit !important;\">Type : Lotion</li><li style=\"box-sizing: inherit; margin: 0px; padding: 0px; font-size: inherit; text-transform: none; list-style: inherit !important;\">Brand : GOSH</li></ul>', '<p>Standard Fashionys.com Terms &amp; Conditions<br></p>', '<p>Standard Fashionys.com Return Policy</p>', 7, 0, 1, 40),
-(77, 'Laptop Backpack', '', '100', 10, 'product-featured-77.jpg', '<div><font color=\"#0a0a0a\" face=\"opensans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif\">Distinct design and pockets galore The striking, modern look of the Skedaddle Laptop Backpack exudes confidence with multi-functional pockets and protects your laptop.<br></font></div>', 'Baggallini Skedaddle Laptop Backpack specifically for women.', '<table>\r\n<tbody><tr>\r\n<td>Brand: </td>\r\n<td>Baggallini</td>\r\n</tr>\r\n<tr>\r\n<td>Features: </td>\r\n<td>Pockets: 3 interior slip, 3 interior zip, 4 exterior</td>\r\n</tr>\r\n<tr>\r\n<td>Target Group: </td>\r\n<td>Women</td>\r\n</tr>\r\n<tr>\r\n<td>Country of Origin: </td>\r\n<td>U.S.A</td>\r\n</tr>\r\n</tbody></table>', 'This product is directly shipped from U.S.A. and it includes import duty in the price.', '<p>Standard Return Policy</p>', 2, 1, 1, 60),
-(78, 'Blouse for Women', '110', '50', 10, 'product-featured-78.jpg', '<p>Stripes pattern with small metal beads on strap</p><p>Pair this top with your favorite pants for that casual classy look</p><p>Size on model: S</p>', '<p>This sleeveless blouse is made of 55% Viscose, 43% Polyamide, 2% Spandex<br></p>', '<p><table></p><p><tr></p><p><td>Brand: </td></p><p><td>Guess</td></p><p></tr></p><p><tr></p><p><td>Occasion: </td></p><p><td>Casual Dress</td></p><p></tr></p><p><tr></p><p><td>Material: </td></p><p><td>Mixed Materials</td></p><p></tr></p><p><tr></p><p><td>Sleeve Length: </td></p><p><td>Sleeveless</td></p><p></tr></p><p></table></p>', '<p>Standard Terms & Conditions<br></p>', '<p>Standard Return Policy</p>', 3, 0, 1, 33),
-(79, 'Glamorous Shirt Dress For Women', '100', '85', 10, 'product-featured-79.jpg', '<p><span style=\"color: rgb(10, 10, 10); font-family: opensans, \"Helvetica Neue\", Helvetica, Helvetica, Arial, sans-serif;\">Show off your style in Glamorous’ Shirt dress for women. Crafted with soft and rich Polyester material, this dress will offer you great comfort and flair. Flaunt in glamour by pairing it with a matching footwear to experience a sophisticated take on every day wear by making a unique style statement wherever you go.</span><br></p>', '<p><span style=\"color: rgb(51, 51, 51); font-family: opensans, \"Helvetica Neue\", Helvetica, Helvetica, Arial, sans-serif; font-size: 14px;\">Show off your style in Glamorous’ Shirt dress for women. Crafted with soft and rich Polyester material, this dress will offer you great comfort and flair. Flaunt in glamour by pairing it with a matching footwear to experience a sophisticated take on every day wear by making a unique style statement wherever you go.</span><br></p>', '<p>N/A</p>', '<p>N/A</p>', '<p>N/A</p>', 6, 1, 1, 32),
-(80, 'Jeans for Women - Denim', '', '249', 10, 'product-featured-80.jpg', '<p><span style=\"color: rgb(10, 10, 10); font-family: opensans, \"Helvetica Neue\", Helvetica, Helvetica, Arial, sans-serif;\">Looking for a way to diversify your attire for the day then go ahead and wear these jeans from the house of Guess. Made of cotton, these jeans will let your skin breathe, keeping you comfortable all day long. Team them with a white colored top to complete your casual look.</span><br></p>', '<p><span style=\"color: rgb(10, 10, 10); font-family: opensans, \"Helvetica Neue\", Helvetica, Helvetica, Arial, sans-serif;\">Looking for a way to diversify your attire for the day then go ahead and wear these jeans from the house of Guess. Made of cotton, these jeans will let your skin breathe, keeping you comfortable all day long. Team them with a white colored top to complete your casual look.</span><br></p>', '<p><span style=\"color: rgb(10, 10, 10); font-family: opensans, \"Helvetica Neue\", Helvetica, Helvetica, Arial, sans-serif;\">Looking for a way to diversify your attire for the day then go ahead and wear these jeans from the house of Guess. Made of cotton, these jeans will let your skin breathe, keeping you comfortable all day long. Team them with a white colored top to complete your casual look.</span><br></p>', '<p>Standard Terms & Conditions    </p>', '<p>Standard Return Policy</p>', 2, 1, 1, 35),
-(81, 'Black Wool Beanie & Bobble Hat For Unisex', '10', '1', 9, 'product-featured-81.jpg', '<p>These Soft Knit Cap is a warm and comfortable choice.&nbsp;</p><p>Soft material will make you feel so comfortable and will make you look so special in the crowd .</p><p>This Men\'s Soft Lined Thick Knit Cap Warm Winter beanies Hat with Fully lined it warmth and comfort, very soft.</p>', '<p>These Soft Knit Cap is a warm and comfortable choice.&nbsp;</p><p>Soft material will make you feel so comfortable and will make you look so special in the crowd .</p><p>This Men\'s Soft Lined Thick Knit Cap Warm Winter beanies Hat with Fully lined it warmth and comfort, very soft.</p>', '<p>These Soft Knit Cap is a warm and comfortable choice.&nbsp;</p><p>Soft material will make you feel so comfortable and will make you look so special in the crowd .</p><p>This Men\'s Soft Lined Thick Knit Cap Warm Winter beanies Hat with Fully lined it warmth and comfort, very soft.</p>', '<p>Fashionys.com Standard Terms &amp; Conditions</p>', '<p>Fashionys.com Standard Return Policy<br></p>', 9, 1, 1, 1);
-
+(1, '1986 MJ Rookie Card - PSA 7', '$12000.00', '$10000.00', '2', '', '1986 Fleer #57 PSA Graded 7 Michael Jordan Rookie Card', '', '', '', '', '', 1, 1, 2);
 -- --------------------------------------------------------
 
 --
@@ -1184,15 +1120,11 @@ CREATE TABLE `tbl_top_category` (
 
 INSERT INTO `tbl_top_category` (`tcat_id`, `tcat_name`, `show_on_menu`) VALUES
 (1, 'Home', 1),
-(2, 'NBA', 1),
-(3, 'NFL', 1);
-(4, 'NHL & MLB', 1),
-(5, 'Other Sports', 1),
-(6, 'Memorabilia', 1);
-(7, 'Entertainment', 1),
-(8, 'Clothing', 1),
-(9, 'Currencies, Metals, Gems', 1);
-(10, 'Services', 1);
+(2, 'The Card Shop', 1),
+(3, 'Collectibles', 1)
+(4, 'The Fashion Mall', 1),
+(5, 'Currency Exchange', 1),
+(6, 'Services', 1);
  
  
  
