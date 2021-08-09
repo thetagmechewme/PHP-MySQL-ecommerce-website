@@ -31,33 +31,29 @@ SET time_zone = "+00:00";
 CREATE TABLE `tbl_color` (
   `color_id` int(11) NOT NULL,
   `color_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_color`
 --
 
-INSERT INTO `tbl_color` (`color_id`, `color_name`) VALUES
-(1, 'Red'),
-(2, 'Black'),
-(3, 'Blue'),
-(4, 'Yellow'),
-(5, 'Green'),
-(6, 'White'),
-(7, 'Orange'),
-(8, 'Brown'),
-(9, 'Tan'),
-(10, 'Pink'),
-(11, 'Mixed'),
-(12, 'Lightblue'),
-(13, 'Violet'),
-(14, 'Light Purple'),
-(15, 'Salmon'),
-(16, 'Gold'),
-(17, 'Gray'),
-(18, 'Ash'),
-(19, 'Maroon'),
-(20, 'Silver');
+INSERT INTO `tbl_color` (`color_id`, `color_name`, `rgb_hex`) VALUES
+(1, 'Black', '#000'),
+(2, 'White', '#fff'),
+(3, 'Green', '#07a30c'),
+(4, 'Gold', '#dbde9b'),
+(5, 'ND_Blue', '#0C2340'),
+(6, 'Irsh_Flag_Green', '##169B62'),
+(7, 'Irish_Flag_Orange', '#FF883E'),
+(8, 'LSU_Purple', '#461D7C'),
+(9, 'LSU_Yellow', #FDD023');
+
+ 
+ ALTER TABLE `tbl_color`
+  ADD PRIMARY KEY (`color_id`);
+ 
+ ALTER TABLE `tbl_color`
+  MODIFY `color_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 -- --------------------------------------------------------
 
@@ -68,258 +64,28 @@ INSERT INTO `tbl_color` (`color_id`, `color_name`) VALUES
 CREATE TABLE `tbl_country` (
   `country_id` int(11) NOT NULL,
   `country_name` varchar(100) NOT NULL DEFAULT ''
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_country`
 --
 
 INSERT INTO `tbl_country` (`country_id`, `country_name`) VALUES
-(1, 'Afghanistan'),
-(2, 'Albania'),
-(3, 'Algeria'),
-(4, 'American Samoa'),
-(5, 'Andorra'),
-(6, 'Angola'),
-(7, 'Anguilla'),
-(8, 'Antarctica'),
-(9, 'Antigua and Barbuda'),
-(10, 'Argentina'),
-(11, 'Armenia'),
-(12, 'Aruba'),
-(13, 'Australia'),
-(14, 'Austria'),
-(15, 'Azerbaijan'),
-(16, 'Bahamas'),
-(17, 'Bahrain'),
-(18, 'Bangladesh'),
-(19, 'Barbados'),
-(20, 'Belarus'),
-(21, 'Belgium'),
-(22, 'Belize'),
-(23, 'Benin'),
-(24, 'Bermuda'),
-(25, 'Bhutan'),
-(26, 'Bolivia'),
-(27, 'Bosnia and Herzegovina'),
-(28, 'Botswana'),
-(29, 'Bouvet Island'),
-(30, 'Brazil'),
-(31, 'British Indian Ocean Territory'),
-(32, 'Brunei Darussalam'),
-(33, 'Bulgaria'),
-(34, 'Burkina Faso'),
-(35, 'Burundi'),
-(36, 'Cambodia'),
-(37, 'Cameroon'),
-(38, 'Canada'),
-(39, 'Cape Verde'),
-(40, 'Cayman Islands'),
-(41, 'Central African Republic'),
-(42, 'Chad'),
-(43, 'Chile'),
-(44, 'China'),
-(45, 'Christmas Island'),
-(46, 'Cocos (Keeling) Islands'),
-(47, 'Colombia'),
-(48, 'Comoros'),
-(49, 'Congo'),
-(50, 'Cook Islands'),
-(51, 'Costa Rica'),
-(52, 'Croatia (Hrvatska)'),
-(53, 'Cuba'),
-(54, 'Cyprus'),
-(55, 'Czech Republic'),
-(56, 'Denmark'),
-(57, 'Djibouti'),
-(58, 'Dominica'),
-(59, 'Dominican Republic'),
-(60, 'East Timor'),
-(61, 'Ecuador'),
-(62, 'Egypt'),
-(63, 'El Salvador'),
-(64, 'Equatorial Guinea'),
-(65, 'Eritrea'),
-(66, 'Estonia'),
-(67, 'Ethiopia'),
-(68, 'Falkland Islands (Malvinas)'),
-(69, 'Faroe Islands'),
-(70, 'Fiji'),
-(71, 'Finland'),
-(72, 'France'),
-(73, 'France, Metropolitan'),
-(74, 'French Guiana'),
-(75, 'French Polynesia'),
-(76, 'French Southern Territories'),
-(77, 'Gabon'),
-(78, 'Gambia'),
-(79, 'Georgia'),
-(80, 'Germany'),
-(81, 'Ghana'),
-(82, 'Gibraltar'),
-(83, 'Guernsey'),
-(84, 'Greece'),
-(85, 'Greenland'),
-(86, 'Grenada'),
-(87, 'Guadeloupe'),
-(88, 'Guam'),
-(89, 'Guatemala'),
-(90, 'Guinea'),
-(91, 'Guinea-Bissau'),
-(92, 'Guyana'),
-(93, 'Haiti'),
-(94, 'Heard and Mc Donald Islands'),
-(95, 'Honduras'),
-(96, 'Hong Kong'),
-(97, 'Hungary'),
-(98, 'Iceland'),
-(99, 'India'),
-(100, 'Isle of Man'),
-(101, 'Indonesia'),
-(102, 'Iran (Islamic Republic of)'),
-(103, 'Iraq'),
-(104, 'Ireland'),
-(105, 'Israel'),
-(106, 'Italy'),
-(107, 'Ivory Coast'),
-(108, 'Jersey'),
-(109, 'Jamaica'),
-(110, 'Japan'),
-(111, 'Jordan'),
-(112, 'Kazakhstan'),
-(113, 'Kenya'),
-(114, 'Kiribati'),
-(115, 'Korea, Democratic People\'s Republic of'),
-(116, 'Korea, Republic of'),
-(117, 'Kosovo'),
-(118, 'Kuwait'),
-(119, 'Kyrgyzstan'),
-(120, 'Lao People\'s Democratic Republic'),
-(121, 'Latvia'),
-(122, 'Lebanon'),
-(123, 'Lesotho'),
-(124, 'Liberia'),
-(125, 'Libyan Arab Jamahiriya'),
-(126, 'Liechtenstein'),
-(127, 'Lithuania'),
-(128, 'Luxembourg'),
-(129, 'Macau'),
-(130, 'Macedonia'),
-(131, 'Madagascar'),
-(132, 'Malawi'),
-(133, 'Malaysia'),
-(134, 'Maldives'),
-(135, 'Mali'),
-(136, 'Malta'),
-(137, 'Marshall Islands'),
-(138, 'Martinique'),
-(139, 'Mauritania'),
-(140, 'Mauritius'),
-(141, 'Mayotte'),
-(142, 'Mexico'),
-(143, 'Micronesia, Federated States of'),
-(144, 'Moldova, Republic of'),
-(145, 'Monaco'),
-(146, 'Mongolia'),
-(147, 'Montenegro'),
-(148, 'Montserrat'),
-(149, 'Morocco'),
-(150, 'Mozambique'),
-(151, 'Myanmar'),
-(152, 'Namibia'),
-(153, 'Nauru'),
-(154, 'Nepal'),
-(155, 'Netherlands'),
-(156, 'Netherlands Antilles'),
-(157, 'New Caledonia'),
-(158, 'New Zealand'),
-(159, 'Nicaragua'),
-(160, 'Niger'),
-(161, 'Nigeria'),
-(162, 'Niue'),
-(163, 'Norfolk Island'),
-(164, 'Northern Mariana Islands'),
-(165, 'Norway'),
-(166, 'Oman'),
-(167, 'Pakistan'),
-(168, 'Palau'),
-(169, 'Palestine'),
-(170, 'Panama'),
-(171, 'Papua New Guinea'),
-(172, 'Paraguay'),
-(173, 'Peru'),
-(174, 'Philippines'),
-(175, 'Pitcairn'),
-(176, 'Poland'),
-(177, 'Portugal'),
-(178, 'Puerto Rico'),
-(179, 'Qatar'),
-(180, 'Reunion'),
-(181, 'Romania'),
-(182, 'Russian Federation'),
-(183, 'Rwanda'),
-(184, 'Saint Kitts and Nevis'),
-(185, 'Saint Lucia'),
-(186, 'Saint Vincent and the Grenadines'),
-(187, 'Samoa'),
-(188, 'San Marino'),
-(189, 'Sao Tome and Principe'),
-(190, 'Saudi Arabia'),
-(191, 'Senegal'),
-(192, 'Serbia'),
-(193, 'Seychelles'),
-(194, 'Sierra Leone'),
-(195, 'Singapore'),
-(196, 'Slovakia'),
-(197, 'Slovenia'),
-(198, 'Solomon Islands'),
-(199, 'Somalia'),
-(200, 'South Africa'),
-(201, 'South Georgia South Sandwich Islands'),
-(202, 'Spain'),
-(203, 'Sri Lanka'),
-(204, 'St. Helena'),
-(205, 'St. Pierre and Miquelon'),
-(206, 'Sudan'),
-(207, 'Suriname'),
-(208, 'Svalbard and Jan Mayen Islands'),
-(209, 'Swaziland'),
-(210, 'Sweden'),
-(211, 'Switzerland'),
-(212, 'Syrian Arab Republic'),
-(213, 'Taiwan'),
-(214, 'Tajikistan'),
-(215, 'Tanzania, United Republic of'),
-(216, 'Thailand'),
-(217, 'Togo'),
-(218, 'Tokelau'),
-(219, 'Tonga'),
-(220, 'Trinidad and Tobago'),
-(221, 'Tunisia'),
-(222, 'Turkey'),
-(223, 'Turkmenistan'),
-(224, 'Turks and Caicos Islands'),
-(225, 'Tuvalu'),
-(226, 'Uganda'),
-(227, 'Ukraine'),
-(228, 'United Arab Emirates'),
-(229, 'United Kingdom'),
-(230, 'United States'),
-(231, 'United States minor outlying islands'),
-(232, 'Uruguay'),
-(233, 'Uzbekistan'),
-(234, 'Vanuatu'),
-(235, 'Vatican City State'),
-(236, 'Venezuela'),
-(237, 'Vietnam'),
-(238, 'Virgin Islands (British)'),
-(239, 'Virgin Islands (U.S.)'),
-(240, 'Wallis and Futuna Islands'),
-(241, 'Western Sahara'),
-(242, 'Yemen'),
-(243, 'Zaire'),
-(244, 'Zambia'),
-(245, 'Zimbabwe');
+
+(1, 'Australia'),
+(2, 'Bahamas'),
+(3, 'Bermuda'),
+(4, 'Cayman Islands'),
+(5, 'Fiji'),
+(6, 'Finland'),
+(7, 'France'),
+(8, 'Iceland'),
+(9, 'Ireland'),
+(10, 'Sweden'),
+(11, 'Switzerland'),
+(12, 'Trinidad and Tobago'),
+(13, 'Turks and Caicos Islands'),
+(14, 'United States');
 
 -- --------------------------------------------------------
 
@@ -329,45 +95,30 @@ INSERT INTO `tbl_country` (`country_id`, `country_name`) VALUES
 
 CREATE TABLE `tbl_customer` (
   `cust_id` int(11) NOT NULL,
-  `cust_name` varchar(100) NOT NULL,
-  `cust_cname` varchar(100) NOT NULL,
-  `cust_email` varchar(100) NOT NULL,
+  `cust_username` varchar(20) NOT NULL,
+  `cust_firstname` varchar(20) NOT NULL,
+  `cust_lastname` varchar(30) NOT NULL,
+  `cust_email` varchar(50) NOT NULL,
   `cust_phone` varchar(50) NOT NULL,
+  `cust_address` varchar(100) NOT NULL,
+  `cust_city` varchar(30) NOT NULL,
+  `cust_state` varchar(20) NOT NULL,
+  `cust_zip` varchar(10) NOT NULL,
   `cust_country` int(11) NOT NULL,
-  `cust_address` text NOT NULL,
-  `cust_city` varchar(100) NOT NULL,
-  `cust_state` varchar(100) NOT NULL,
-  `cust_zip` varchar(30) NOT NULL,
-  `cust_b_name` varchar(100) NOT NULL,
-  `cust_b_cname` varchar(100) NOT NULL,
-  `cust_b_phone` varchar(50) NOT NULL,
-  `cust_b_country` int(11) NOT NULL,
-  `cust_b_address` text NOT NULL,
-  `cust_b_city` varchar(100) NOT NULL,
-  `cust_b_state` varchar(100) NOT NULL,
-  `cust_b_zip` varchar(30) NOT NULL,
-  `cust_s_name` varchar(100) NOT NULL,
-  `cust_s_cname` varchar(100) NOT NULL,
-  `cust_s_phone` varchar(50) NOT NULL,
-  `cust_s_country` int(11) NOT NULL,
-  `cust_s_address` text NOT NULL,
-  `cust_s_city` varchar(100) NOT NULL,
-  `cust_s_state` varchar(100) NOT NULL,
-  `cust_s_zip` varchar(30) NOT NULL,
   `cust_password` varchar(100) NOT NULL,
   `cust_token` varchar(255) NOT NULL,
   `cust_datetime` varchar(100) NOT NULL,
   `cust_timestamp` varchar(100) NOT NULL,
   `cust_status` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_customer`
 --
 
-INSERT INTO `tbl_customer` (`cust_id`, `cust_name`, `cust_cname`, `cust_email`, `cust_phone`, `cust_country`, `cust_address`, `cust_city`, `cust_state`, `cust_zip`, `cust_b_name`, `cust_b_cname`, `cust_b_phone`, `cust_b_country`, `cust_b_address`, `cust_b_city`, `cust_b_state`, `cust_b_zip`, `cust_s_name`, `cust_s_cname`, `cust_s_phone`, `cust_s_country`, `cust_s_address`, `cust_s_city`, `cust_s_state`, `cust_s_zip`, `cust_password`, `cust_token`, `cust_datetime`, `cust_timestamp`, `cust_status`) VALUES
-(4, 'Hammad', '', 'wonk.xags@gmail.com', '49857243857', 228, 'address', 'dubai', 'dubai', '0000', '', '', '', 0, '', '', '', '', '', '', '', 0, '', '', '', '', 'e10adc3949ba59abbe56e057f20f883e', '34d03a29d49aaba635ad6efee22c4d30', '2018-04-21 02:40:10', '1524264010', 1),
-(5, 'Hammad Hassan', '', 'mc170200216@vu.edu.pk', '49857243857', 228, 'address', 'dubai', 'Dubai', '0000', 'Hammad Hassan', 'Company Name', '971502020067', 228, 'Dubai Investments Park 1', 'Dubai', 'Dubai', '75400', 'Hammad Hassan', 'Company Name', '971502020067', 228, 'Dubai Investments Park 1', 'Dubai', 'Dubai', '75400', '9794cb7c1989a7d0d36a62426cb170e4', '92dd269f6494db9e8e8ab28c528bbe80', '2018-04-23 10:06:51', '1524506811', 1);
+INSERT INTO `tbl_customer` (`cust_id`, `cust_userame`, `cust_firstname`, `cust_lastname`, `cust_email`, `cust_phone`, `cust_address`, `cust_city`, `cust_state`, `cust_zip`,  `cust_country`, `cust_password`, `cust_token`, `cust_datetime`, `cust_timestamp`, `cust_status`) VALUES
+(1, 'Hammad', '', '', 'wonk.xags@gmail.com', '49857243857', 'address', 'dubai', 'dubai', '0000', '13', 'e10adc3949ba59abbe56e057f20f883e', '34d03a29d49aaba635ad6efee22c4d30', '2018-04-21 02:40:10', '1524264010', 1),
+(2, 'Hammad Hassan', '',  '', 'mc170200216@vu.edu.pk', '49857243857', 'Dubai Investments Park 1', 'Dubai', 'Dubai', '75400', 1, '9794cb7c1989a7d0d36a62426cb170e4', '92dd269f6494db9e8e8ab28c528bbe80', '2018-04-23 10:06:51', '1524506811', 1);
 
 -- --------------------------------------------------------
 
@@ -381,18 +132,9 @@ CREATE TABLE `tbl_customer_message` (
   `message` text NOT NULL,
   `order_detail` text NOT NULL,
   `cust_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8_general_ci;
 
---
--- Dumping data for table `tbl_customer_message`
---
 
-INSERT INTO `tbl_customer_message` (`customer_message_id`, `subject`, `message`, `order_detail`, `cust_id`) VALUES
-(5, 'Shipping complete', 'Thank you', '\r\nCustomer Name: Morshedul Arefin<br>\r\nCustomer Email: arefin2k@gmail.com<br>\r\nPayment Date: 2018-01-24 21:50:13<br>\r\nTransaction Id: Morshedul Arefin<br>\r\nPaid Amount: <br>\r\nPayment Status: Completed<br>\r\nShipping Status: Completed<br>\r\nPayment Id: 1516809013<br>\r\n            \r\n<br><b><u>Product Item 1</u></b><br>\r\nProduct Name: Star Wars Darth Vader<br>\r\nSize: S<br>\r\nColor: Red<br>\r\nQuantity: 3<br>\r\nUnit Price: 20<br>\r\n            \r\n<br><b><u>Product Item 2</u></b><br>\r\nProduct Name: Charismatic Red Cotton T-shirt for Men<br>\r\nSize: <br>\r\nColor: Yellow<br>\r\nQuantity: 2<br>\r\nUnit Price: 10<br>\r\n            ', 1),
-(4, 'Very well website man!', 'This is a great oppotunity that you made a website for us. ', '\r\nCustomer Name: Morshedul Arefin<br>\r\nCustomer Email: arefin2k@gmail.com<br>\r\nPayment Date: 2018-01-23 09:12:03<br>\r\nTransaction Id: Morshedul Arefin<br>\r\nPaid Amount: 73X439878E771115E<br>\r\nPayment Status: Completed<br>\r\nShipping Status: Pending<br>\r\nPayment Id: 1516677123<br>\r\n            \r\n<b><u>Product Item 1</u></b><br>\r\nProduct Name: Star Wars Darth Vader<br>\r\nSize: S<br>\r\nColor: Red<br>\r\nQuantity: 2<br>\r\nUnit Price: 20<br>\r\n            \r\n<b><u>Product Item 2</u></b><br>\r\nProduct Name: Pant 1<br>\r\nSize: XS<br>\r\nColor: White<br>\r\nQuantity: 1<br>\r\nUnit Price: 12<br>\r\n            ', 1),
-(6, 'sdfsdf', 'sdfsdfsdfsdf', '\r\nCustomer Name: Morshedul Arefin<br>\r\nCustomer Email: arefin2k@gmail.com<br>\r\nPayment Date: 2018-01-25 21:37:50<br>\r\nTransaction Id: Morshedul Arefin<br>\r\nPaid Amount: <br>\r\nPayment Status: Pending<br>\r\nShipping Status: Pending<br>\r\nPayment Id: 1516894670<br>\r\n            \r\n<br><b><u>Product Item 1</u></b><br>\r\nProduct Name: Star Wars Darth Vader<br>\r\nSize: S<br>\r\nColor: Red<br>\r\nQuantity: 1<br>\r\nUnit Price: 20<br>\r\n            ', 1),
-(7, 'OK', 'THANK YOU', '\r\nCustomer Name: Morshedul Arefin<br>\r\nCustomer Email: arefin2k@gmail.com<br>\r\nPayment Method: Stripe<br>\r\nPayment Date: 2018-01-25 21:36:18<br>\r\nPayment Details: <br>\r\nTransaction Id: ch_1BoCm0BoKopKik6A5H4hB6zs<br>\r\nCard number: 4242424242424242<br>\r\nCard CVV: 444<br>\r\nCard Month: 12<br>\r\nCard Year: 2020<br>\r\n        		<br>\r\nPaid Amount: 20<br>\r\nPayment Status: Completed<br>\r\nShipping Status: Pending<br>\r\nPayment Id: 1516894578<br>\r\n            \r\n<br><b><u>Product Item 1</u></b><br>\r\nProduct Name: Star Wars Darth Vader<br>\r\nSize: S<br>\r\nColor: Red<br>\r\nQuantity: 1<br>\r\nUnit Price: 20<br>\r\n            ', 1),
-(8, 'Product Shipped', 'Dear Customer,\r\n\r\nYour order has been shipped.\r\n\r\nLet us know when you have any question.\r\n\r\nBest regards,\r\nHammad Hassan', '\r\nCustomer Name: Hammad Hassan<br>\r\nCustomer Email: mc170200216@vu.edu.pk<br>\r\nPayment Method: PayPal<br>\r\nPayment Date: 2018-04-25 18:28:46<br>\r\nPayment Details: <br>\r\nTransaction Id: <br>\r\n        		<br>\r\nPaid Amount: 1<br>\r\nPayment Status: Completed<br>\r\nShipping Status: Completed<br>\r\nPayment Id: 1524666526<br>\r\n            \r\n<br><b><u>Product Item 1</u></b><br>\r\nProduct Name: Black Wool Beanie & Bobble Hat For Unisex<br>\r\nSize: <br>\r\nColor: Black<br>\r\nQuantity: 1<br>\r\nUnit Price: 1<br>\r\n            ', 5);
 
 -- --------------------------------------------------------
 
@@ -404,7 +146,7 @@ CREATE TABLE `tbl_end_category` (
   `ecat_id` int(11) NOT NULL,
   `ecat_name` varchar(255) NOT NULL,
   `mcat_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_end_category`
@@ -1260,14 +1002,14 @@ CREATE TABLE `tbl_settings` (
   `ads_above_popular_product_on_off` int(1) NOT NULL,
   `ads_above_testimonial_on_off` int(1) NOT NULL,
   `ads_category_sidebar_on_off` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;;
 
 --
 -- Dumping data for table `tbl_settings`
 --
 
 INSERT INTO `tbl_settings` (`id`, `logo`, `favicon`, `footer_about`, `footer_copyright`, `contact_address`, `contact_email`, `contact_phone`, `contact_fax`, `contact_map_iframe`, `receive_email`, `receive_email_subject`, `receive_email_thank_you_message`, `forget_password_message`, `total_recent_post_footer`, `total_popular_post_footer`, `total_recent_post_sidebar`, `total_popular_post_sidebar`, `total_featured_product_home`, `total_latest_product_home`, `total_popular_product_home`, `meta_title_home`, `meta_keyword_home`, `meta_description_home`, `banner_login`, `banner_registration`, `banner_forget_password`, `banner_reset_password`, `banner_search`, `banner_cart`, `banner_checkout`, `banner_product_category`, `banner_blog`, `cta_title`, `cta_content`, `cta_read_more_text`, `cta_read_more_url`, `cta_photo`, `featured_product_title`, `featured_product_subtitle`, `latest_product_title`, `latest_product_subtitle`, `popular_product_title`, `popular_product_subtitle`, `testimonial_title`, `testimonial_subtitle`, `testimonial_photo`, `blog_title`, `blog_subtitle`, `newsletter_text`, `paypal_email`, `stripe_public_key`, `stripe_secret_key`, `bank_detail`, `before_head`, `after_body`, `before_body`, `home_service_on_off`, `home_welcome_on_off`, `home_featured_product_on_off`, `home_latest_product_on_off`, `home_popular_product_on_off`, `home_testimonial_on_off`, `home_blog_on_off`, `newsletter_on_off`, `ads_above_welcome_on_off`, `ads_above_featured_product_on_off`, `ads_above_latest_product_on_off`, `ads_above_popular_product_on_off`, `ads_above_testimonial_on_off`, `ads_category_sidebar_on_off`) VALUES
-(1, 'logo.png', 'favicon.png', '<p>Lorem ipsum dolor sit amet, omnis signiferumque in mei, mei ex enim concludaturque. Senserit salutandi euripidis no per, modus maiestatis scribentur est an.Â Ea suas pertinax has.</p>\r\n', 'Copyright © 2018. All Rights Reserved. | A project from Virtual University of Pakistan Student [MC170200216]', 'France Cluster Q06\r\nDubai, United Arab Emirates', 'support@fashionys.com', '+971 50 202 0067', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14445.264561651647!2d55.402891!3d25.158801!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb3eef1e51ba29403!2sSham+Cafe!5e0!3m2!1sen!2sae!4v1524656555881\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 'support@fashionys.com', 'Visitor Email Message from Fashionys.com', 'Thank you for sending email. We will contact you shortly.', 'A confirmation link is sent to your email address. You will get the password reset information in there.', 4, 4, 5, 5, 4, 4, 4, 'Fashionys.com | Online Garments Shop', 'fashionys, garments shop, online garments, dubai garments', 'fashionys.com is an online garments shop.', 'banner_login.jpg', 'banner_registration.jpg', 'banner_forget_password.jpg', 'banner_reset_password.jpg', 'banner_search.jpg', 'banner_cart.jpg', 'banner_checkout.jpg', 'banner_product_category.jpg', 'banner_blog.jpg', 'Welcome To Our Ecommerce Website', 'Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, \r\nat usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. ', 'Read More', '#', 'cta.jpg', 'Featured Products', 'See all our featured products from here', 'Latest Products', 'See all our latest products from here', 'Popular Products', 'See all our popular products from here', 'Testimonials', 'See what our clients tell about us', 'testimonial.jpg', 'Latest Blog', 'See all our latest articles and news from below', 'Sign-up to our newsletter for latest promotions and discounts.', 'admin@fashionys.com', 'pk_test_0SwMWadgu8DwmEcPdUPRsZ7b', 'sk_test_TFcsLJ7xxUtpALbDo1L5c1PN', 'Bank Name: ABC Bank\r\nAccount Number: 1222320234444\r\nBranch Name: NY Branch\r\nCountry: USA', '<!-- Google Analytics -->\r\n<!-- Global site tag (gtag.js) - Google Analytics -->\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-8564299-3\"></script>\r\n<script>\r\n  window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n  gtag(\'js\', new Date());\r\n\r\n  gtag(\'config\', \'UA-8564299-3\');\r\n</script>\r\n', '<div id=\"fb-root\"></div>\r\n<script>(function(d, s, id) {\r\n  var js, fjs = d.getElementsByTagName(s)[0];\r\n  if (d.getElementById(id)) return;\r\n  js = d.createElement(s); js.id = id;\r\n  js.src = \"//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=323620764400430\";\r\n  fjs.parentNode.insertBefore(js, fjs);\r\n}(document, \'script\', \'facebook-jssdk\'));</script>', '<!--Start of Tawk.to Script-->\r\n<script type=\"text/javascript\">\r\nvar Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();\r\n(function(){\r\nvar s1=document.createElement(\"script\"),s0=document.getElementsByTagName(\"script\")[0];\r\ns1.async=true;\r\ns1.src=\'https://embed.tawk.to/5ae370d7227d3d7edc24cb96/default\';\r\ns1.charset=\'UTF-8\';\r\ns1.setAttribute(\'crossorigin\',\'*\');\r\ns0.parentNode.insertBefore(s1,s0);\r\n})();\r\n</script>\r\n<!--End of Tawk.to Script-->', 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+(1, 'logo.png', 'favicon.png', '<p>', 'Copyright © 2021. All Rights Reserved. | A Online Scam Site', '', '', '', '', '', 'email@address.com', 'Visitor Email Message', 'Thank you for sending email. We will contact you shortly.', 'A confirmation link is sent to your email address. You will get the password reset information in there.', 4, 4, 5, 5, 4, 4, 4, 'Fashionys.com | Online Garments Shop', 'fashionys, garments shop, online garments, dubai garments', 'fashionys.com is an online garments shop.', 'banner_login.jpg', 'banner_registration.jpg', 'banner_forget_password.jpg', 'banner_reset_password.jpg', 'banner_search.jpg', 'banner_cart.jpg', 'banner_checkout.jpg', 'banner_product_category.jpg', 'banner_blog.jpg', 'Welcome To Our Ecommerce Website', '', 'Read More', '#', 'cta.jpg', 'Featured Products', 'See all our featured products from here', 'Latest Products', 'See all our latest products from here', 'Popular Products', 'See all our popular products from here', 'Testimonials', 'See what our clients tell about us', 'testimonial.jpg', 'Latest Blog', 'See all our latest articles and news from below', 'Sign-up to our newsletter for latest promotions and discounts.', 'admin@fashionys.com', '', '', 'Bank Name: Not Your Bank \r\nAccount Number: 17169364-base26\r\nBranch Name: NY Branch\r\nCountry: USA', '', '', '', 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1279,16 +1021,29 @@ CREATE TABLE `tbl_shipping_cost` (
   `shipping_cost_id` int(11) NOT NULL,
   `country_id` int(11) NOT NULL,
   `amount` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_shipping_cost`
 --
 
 INSERT INTO `tbl_shipping_cost` (`shipping_cost_id`, `country_id`, `amount`) VALUES
-(1, 228, '0'),
-(2, 167, '10'),
-(3, 13, '8');
+(1, 1, '29.99'),
+(2, 2, '19.99'),
+(3, 3, '19.99'),
+(4, 4, '9.99'),
+(5, 5, '9.99');
+(6, 6, '19.99'),
+(7, 7, '19.99'),
+(8, 8, '29.99'),
+(9, 9, '29.99'),
+(10, 10, '29.99'),
+(11, 11, '29.99'),
+(12, 12, '19.99.);
+(13, 13, '19.99'),
+(14, 14, '0.00');
+ 
+ 
 
 -- --------------------------------------------------------
 
@@ -1299,14 +1054,14 @@ INSERT INTO `tbl_shipping_cost` (`shipping_cost_id`, `country_id`, `amount`) VAL
 CREATE TABLE `tbl_shipping_cost_all` (
   `sca_id` int(11) NOT NULL,
   `amount` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_shipping_cost_all`
 --
 
 INSERT INTO `tbl_shipping_cost_all` (`sca_id`, `amount`) VALUES
-(1, '100');
+(1, '39.99');
 
 -- --------------------------------------------------------
 
@@ -1317,8 +1072,7 @@ INSERT INTO `tbl_shipping_cost_all` (`sca_id`, `amount`) VALUES
 CREATE TABLE `tbl_size` (
   `size_id` int(11) NOT NULL,
   `size_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 --
 -- Dumping data for table `tbl_size`
 --
@@ -1331,27 +1085,12 @@ INSERT INTO `tbl_size` (`size_id`, `size_name`) VALUES
 (5, 'XL'),
 (6, 'XXL'),
 (7, '3XL'),
-(8, '31'),
-(9, '32'),
-(10, '33'),
-(11, '34'),
-(12, '35'),
-(13, '36'),
-(14, '37'),
-(15, '38'),
-(16, '39'),
-(17, '40'),
-(18, '41'),
-(19, '42'),
-(20, '43'),
-(21, '44'),
-(22, '45'),
-(23, '46'),
-(24, '47'),
-(25, '48'),
-(26, 'Free Size'),
-(27, 'One Size for All'),
-(28, '10');
+(8, '11'),
+(9, '12'),
+(10, '13'),
+(11, 'Free Size'),
+(12, 'One Size for All'),
+(13, '10');
 
 -- --------------------------------------------------------
 
@@ -1389,15 +1128,15 @@ CREATE TABLE `tbl_social` (
   `social_name` varchar(30) NOT NULL,
   `social_url` varchar(255) NOT NULL,
   `social_icon` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_social`
 --
 
 INSERT INTO `tbl_social` (`social_id`, `social_name`, `social_url`, `social_icon`) VALUES
-(1, 'Facebook', 'https://www.facebook.com/fashionys', 'fa fa-facebook'),
-(2, 'Twitter', 'https://www.twitter.com/fashionys', 'fa fa-twitter'),
+(1, 'Facebook', '', 'fa fa-facebook'),
+(2, 'Twitter', '', 'fa fa-twitter'),
 (3, 'LinkedIn', '', 'fa fa-linkedin'),
 (4, 'Google Plus', '', 'fa fa-google-plus'),
 (5, 'Pinterest', '', 'fa fa-pinterest'),
@@ -1426,8 +1165,7 @@ CREATE TABLE `tbl_subscriber` (
   `subs_date_time` varchar(100) NOT NULL,
   `subs_hash` varchar(255) NOT NULL,
   `subs_active` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 -- --------------------------------------------------------
 
 --
@@ -1438,16 +1176,27 @@ CREATE TABLE `tbl_top_category` (
   `tcat_id` int(11) NOT NULL,
   `tcat_name` varchar(255) NOT NULL,
   `show_on_menu` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_top_category`
 --
 
 INSERT INTO `tbl_top_category` (`tcat_id`, `tcat_name`, `show_on_menu`) VALUES
-(1, 'Men', 1),
-(2, 'Women', 1),
-(3, 'Kids', 1);
+(1, 'Home', 1),
+(2, 'NBA', 1),
+(3, 'NFL', 1);
+(4, 'NHL & MLB', 1),
+(5, 'Other Sports', 1),
+(6, 'Memorabilia', 1);
+(7, 'Entertainment', 1),
+(8, 'Clothing', 1),
+(9, 'Currencies, Metals, Gems', 1);
+(10, 'Services', 1);
+ 
+ 
+ 
+ 
 
 -- --------------------------------------------------------
 
@@ -1464,15 +1213,14 @@ CREATE TABLE `tbl_user` (
   `photo` varchar(255) NOT NULL,
   `role` varchar(30) NOT NULL,
   `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`id`, `full_name`, `email`, `phone`, `password`, `photo`, `role`, `status`) VALUES
-(1, 'Hammad Hassan', 'hammad.shahir@gmail.com', '', '81dc9bdb52d04dc20036dbd8313ed055', 'user-1.jpg', 'Super Admin', 'Active'),
-(13, 'Syed Hammad Hassan Bukhari', 'mc170200216@vu.edu.pk', '', '81dc9bdb52d04dc20036dbd8313ed055', 'user-13.jpg', 'Admin', 'Active');
+(1, 'matthew mcgehee', 'thetagmechewme@gmail.com', '3144791311', '81dc9bdb52d04dc20036dbd8313ed055', 'user-1.jpg', 'Super Admin', 'Active');
 
 -- --------------------------------------------------------
 
@@ -1484,16 +1232,7 @@ CREATE TABLE `tbl_video` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `iframe_code` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_video`
---
-
-INSERT INTO `tbl_video` (`id`, `title`, `iframe_code`) VALUES
-(1, 'Video 1', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/L3XAFSMdVWU\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>'),
-(2, 'Video 2', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/sinQ06YzbJI\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>'),
-(4, 'Video 3', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ViZNgU-Yt-Y\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Indexes for dumped tables
