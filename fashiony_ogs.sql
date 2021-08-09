@@ -117,8 +117,8 @@ CREATE TABLE `tbl_customer` (
 --
 
 INSERT INTO `tbl_customer` (`cust_id`, `cust_userame`, `cust_firstname`, `cust_lastname`, `cust_email`, `cust_phone`, `cust_address`, `cust_city`, `cust_state`, `cust_zip`,  `cust_country`, `cust_password`, `cust_token`, `cust_datetime`, `cust_timestamp`, `cust_status`) VALUES
-(1, 'Matty73', 'Matt', 'McGehee', 'mmcgehee2010@gmail.com', '3144791311', '2674 glendrive Place', 'Maryland Heights', 'MO', '63043', '13', '81dc9bdb52d04dc20036dbd8313ed055', '34d03a29d49aaba635ad6efee22c4d30', '2018-04-21 02:40:10', '1524264010', 1),
-(2, 'Hammad Hassan', '',  '', 'mc170200216@vu.edu.pk', '49857243857', 'Dubai Investments Park 1', 'Dubai', 'Dubai', '75400', 1, '9794cb7c1989a7d0d36a62426cb170e4', '92dd269f6494db9e8e8ab28c528bbe80', '2018-04-23 10:06:51', '1524506811', 1);
+(1, 'mm', 'mm', 'mm', '@gmail.com', '3144791311', '2674 glendrive Place', 'Maryland Heights', 'MO', '63043', '13', 'mm', 'mm', '2018-04-21 02:40:10', '1524264010', 1),
+(2, 'Hammad Hassan', '',  '', 'mc170200216@vu.edu.pk', '49857243857', 'Dubai Investments Park 1', 'Dubai', 'Dubai', '75400', 1, 'mm', '92dd269f6494db9e8e8ab28c528bbe80', '2018-04-23 10:06:51', '1524506811', 1);
 
 -- --------------------------------------------------------
 
